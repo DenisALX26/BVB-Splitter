@@ -3,6 +3,8 @@ import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BVB(webdriver.Chrome):
@@ -10,11 +12,20 @@ class BVB(webdriver.Chrome):
         self.driver_path = driver_path
         self.teardown = teardown
         os.environ["PATH"] += self.driver_path
-        # options = Options()
-        # options.add_experimental_option("detach", True) # Uncomment = chrome window will not close after scraping
-        # options.add_argument("--headless=new")
-        # super(BVB, self).__init__(options=options)
-        super(BVB, self).__init__()
+        options = Options()
+
+        # Hide Selenium (to not get blocked)
+        options.add_argument("--disable-blink-features=AutomationControlled")
+
+        # Add a user-agent to not get blocked
+        options.add_argument(
+            "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
+        )
+
+        # Run Selenium in Headless mode
+        options.add_argument("--headless=new")
+
+        super(BVB, self).__init__(options=options)
         self.implicitly_wait(15)
         self.maximize_window()
 
@@ -24,10 +35,17 @@ class BVB(webdriver.Chrome):
 
     def land_first_page(self):
         self.get(const.BASE_URL)
+        WebDriverWait(self, 10).until(
+            EC.presence_of_element_located((By.ID, "modal_BAI"))
+        )
 
     def accept_cookies(self):
         cookies_btn = self.find_element(By.ID, "cookie-bar-button")
         cookies_btn.click()
+
+    def pass_pop_up(self):
+        home_button = self.find_element(By.ID, "modal_BAI")
+        home_button.click()
 
     def go_to_index_page(self):
         navbar_button = self.find_element(
