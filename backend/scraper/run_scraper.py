@@ -1,6 +1,6 @@
 from bvb.bvb import BVB
-import json
-import os
+from json_utils import save_to_json
+
 
 with BVB() as bot:
     # Parse the BVB page
@@ -12,6 +12,5 @@ with BVB() as bot:
     # Get all companies
     list = bot.show_all_companies()
 
-    # Create the json file
-    with open("companies.json", "w") as file:
-        json.dump(list, file)
+    # Save the data to the json file
+    save_to_json(list)
