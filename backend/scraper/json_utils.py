@@ -11,3 +11,12 @@ json_file_path = os.path.join(backend_diretory_path, "companies.json")
 def save_to_json(data: dict):
     with open(json_file_path, "w") as file:
         json.dump(data, file)
+
+
+# Load the data from the json file
+def load_from_json():
+    try:
+        with open(json_file_path, "r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}

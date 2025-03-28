@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class BVB(webdriver.Chrome):
+class Bvb(webdriver.Chrome):
     def __init__(self, driver_path=r"C:\SeleniumDrivers", teardown=False):
         self.driver_path = driver_path
         self.teardown = teardown
@@ -25,7 +25,7 @@ class BVB(webdriver.Chrome):
         # Run Selenium in Headless mode
         options.add_argument("--headless=new")
 
-        super(BVB, self).__init__(options=options)
+        super(Bvb, self).__init__(options=options)
         self.implicitly_wait(15)
         self.maximize_window()
 
