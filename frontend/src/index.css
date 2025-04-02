@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: "Montserrat", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
+
+  --color-primary: #00aeef;
+  --color-secondary: #00f0e3;
+  --color-black: #1c2224;
+  --color-black75: #1d2325;
+  --color-black50: #1c2224;
+  --color-black25: #1c2224;
+  --color-black10: #1c2224;
+  --color-myGreen: #00f092;
+  --color-hover-blue: #0018f0;
+  --color-third: #00cfe9;
+
+  --font-size-H1: 61px;
+  --font-size-H2: 49px;
+  --font-size-H3: 39px;
+  --font-size-H4: 31px;
+  --font-size-H5: 25px;
+  --font-size-H6: 20px;
+  --font-size-Paragraph: 16px;
+}
+
+@layer utilities {
+  .no-arrows::-webkit-inner-spin-button,
+  .no-arrows::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .no-arrows {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+}
