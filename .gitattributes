@@ -1,0 +1,25 @@
+# Normalizează line endings pentru toate fișierele text
+* text=auto
+
+# Specific pentru fișiere de cod (opțional, dar clar)
+*.js     text
+*.jsx    text
+*.ts     text
+*.tsx    text
+*.css    text
+*.html   text
+*.json   text
+*.py     text
+*.md     text
+*.yml    text
+*.yaml   text
+*.sh     text
+
+# Nu schimba line endings pentru fișiere binare
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.svg    binary
+*.ico    binary
+*.woff   binary
+*.woff2  binary
