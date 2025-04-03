@@ -6,14 +6,14 @@
 
   --color-primary: #00aeef;
   --color-secondary: #00f0e3;
-  --color-black: #1c2224;
-  --color-black75: #1d2325;
-  --color-black50: #1c2224;
-  --color-black25: #1c2224;
-  --color-black10: #1c2224;
-  --color-myGreen: #00f092;
-  --color-hover-blue: #0018f0;
-  --color-third: #00cfe9;
+  --color-black: rgb(29, 35, 37);
+  --color-black75: rgba(29, 35, 37, 0.75);
+  --color-black50: rgba(29, 35, 37, 0.5);
+  --color-black25: rgba(29, 35, 37, 0.25);
+  --color-black10: rgba(29, 35, 37, 0.1);
+  --color-myGreen: rgb(0, 240, 148);
+  --color-hover-blue: rgb(0, 24, 240);
+  --color-third: rgb(0, 207, 233);
 
   --font-size-H1: 61px;
   --font-size-H2: 49px;
