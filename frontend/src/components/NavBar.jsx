@@ -1,13 +1,29 @@
-function Link({ content }) {
+function Link({ content, href }) {
   return (
-    <p className="font-montserrat text-[20px] text-black uppercase hover:text-myGreen cursor-pointer font-bold transition-colors duration-300 ease-in-out">
+    <a
+      className="font-montserrat text-[20px] text-black uppercase hover:text-myGreen cursor-pointer font-bold transition-colors duration-300 ease-in-out"
+      href={href}
+    >
       {content}
-    </p>
+    </a>
   );
 }
 
 function NavBar() {
-  const linksText = ["calculator", "cum functioneaza", "faq"];
+  const links = [
+    {
+      text: "calculator",
+      href: "#calculator",
+    },
+    {
+      text: "cum functioneaza",
+      href: "#how-it-works",
+    },
+    {
+      text: "faq",
+      href: "#faqs",
+    },
+  ];
 
   return (
     <>
@@ -22,8 +38,8 @@ function NavBar() {
           </a>
         </div>
         <div className="links flex gap-[40px] justify-center items-center">
-          {linksText.map((link, index) => (
-            <Link key={index} content={link} />
+          {links.map((link, index) => (
+            <Link key={index} content={link.text} href={link.href} />
           ))}
         </div>
       </nav>
