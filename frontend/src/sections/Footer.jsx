@@ -12,8 +12,8 @@ function getCurrentYear() {
 
 function Footer() {
   return (
-    <footer className="bg-primary px-20 py-4 w-full">
-      <div className="px-20 flex flex-col gap-8 w-full">
+    <footer className="bg-primary px-20 py-4 w-full flex justify-center items-center">
+      <div className="px-20 flex flex-col gap-8 w-full max-w-[1440px]">
         <div className="upper-part flex justify-between items-center">
           <div className="left-content w-[50%]">
             <p className="text-white text-center font-bold font-inter">

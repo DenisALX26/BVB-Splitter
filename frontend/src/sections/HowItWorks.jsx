@@ -30,7 +30,7 @@ const steps = [
 function HowItWorks() {
   return (
     <>
-      <section className="contaier bg-white flex flex-col gap-24 items-center justify-center px-20 pb-4 w-full">
+      <section className="contaier bg-white flex flex-col gap-24 items-center justify-center px-20 pb-4 w-full" id="how-it-works">
         <h5 className="text-[25px] font-bold text-black font-montserrat">
           Cum Functionează?
         </h5>

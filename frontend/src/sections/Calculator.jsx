@@ -4,7 +4,7 @@ function Calculator() {
   return (
     <>
       <section
-        className="container flex flex-col gap-8 justify-center items-center px-[80px] pb-4"
+        className="container flex flex-col gap-8 justify-center items-center px-[80px] pb-4 max-w-[1440px] bg-white"
         id="calculator"
       >
         <img src={QueryIcon} alt="query stats icon" />

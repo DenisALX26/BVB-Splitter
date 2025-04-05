@@ -40,7 +40,7 @@ const faqs = [
 
 function Faqs() {
   return (
-    <section className="container flex flex-col items-center justify-center gap-24 bg-white w-full">
+    <section className="container flex flex-col items-center justify-center gap-24 bg-white w-full max-w-[1440px]" id="faqs">
       <div className="title flex flex-col items-center justify-center gap-2 w-[25%]">
         <h6 className="text-[20px] font-bold font-montserrat text-black">
           FAQs
