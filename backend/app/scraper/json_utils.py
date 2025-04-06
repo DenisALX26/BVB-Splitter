@@ -1,7 +1,7 @@
 import os, json
 
 # Set the path to the backend directory
-backend_diretory_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+backend_diretory_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data"))
 
 # Set the path to the json file
 json_file_path = os.path.join(backend_diretory_path, "companies.json")
