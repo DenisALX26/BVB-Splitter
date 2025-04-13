@@ -20,7 +20,7 @@ def calculate_distribution(companies: dict, amount: int) -> dict:
         company_commission = round(total_investment * commission, 2)
 
         # Calculate the total investment including commission
-        total_investment_with_commission = math.ceil(total_investment + company_commission)
+        total_investment_with_commission = total_investment + company_commission + 1.5
 
         result[symbol] = {
             "name": company["name"],
@@ -28,6 +28,6 @@ def calculate_distribution(companies: dict, amount: int) -> dict:
             "bet_weight": company["weight"],
             "number_of_shares": number_of_shares,
             "commission": round(company_commission + 1.5, 2),
-            "total_investment": total_investment_with_commission,
+            "total_investment": round(total_investment_with_commission, 2),
         }
     return result
