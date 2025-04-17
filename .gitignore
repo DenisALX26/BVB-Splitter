@@ -4,3 +4,6 @@
 # Python compiled files
 *.pyc
 __pycache__/
+
+# Ignore Vite's cache and build files
+.vite
